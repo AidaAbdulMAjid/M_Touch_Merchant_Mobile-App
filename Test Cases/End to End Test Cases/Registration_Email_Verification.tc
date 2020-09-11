@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Forget Password</name>
+   <name>Registration_Email_Verification</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c5622ec5-b09c-4314-a40f-ea468d3d6e33</testCaseGuid>
+   <testCaseGuid>e001d845-b10f-4d4d-bb8c-97d8f1eeefbe</testCaseGuid>
 </TestCaseEntity>

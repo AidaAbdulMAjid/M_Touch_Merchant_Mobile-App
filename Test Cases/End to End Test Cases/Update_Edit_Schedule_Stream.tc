@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Update Product</name>
+   <name>Update_Edit_Schedule_Stream</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>59931660-ba36-46a9-a3c8-289026680bb2</testCaseGuid>
+   <testCaseGuid>0caa1881-6992-4cdd-8541-9d658d084e81</testCaseGuid>
 </TestCaseEntity>
