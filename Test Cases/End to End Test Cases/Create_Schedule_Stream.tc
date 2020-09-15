@@ -5,4 +5,39 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>73b1a636-e0ed-4065-a94c-b30fc4ced241</testCaseGuid>
+   <variable>
+      <defaultValue>'discount'</defaultValue>
+      <description></description>
+      <id>bf35ef8c-b66e-4046-a423-383d6a14d478</id>
+      <masked>false</masked>
+      <name>title</name>
+   </variable>
+   <variable>
+      <defaultValue>'1st year anniversary'</defaultValue>
+      <description></description>
+      <id>3f306625-c1a1-4efd-b9d0-a53f37f2dd41</id>
+      <masked>false</masked>
+      <name>description</name>
+   </variable>
+   <variable>
+      <defaultValue>'Fri Sep 18'</defaultValue>
+      <description></description>
+      <id>87785c00-2c26-414b-b291-396049996ff7</id>
+      <masked>false</masked>
+      <name>date</name>
+   </variable>
+   <variable>
+      <defaultValue>'10'</defaultValue>
+      <description></description>
+      <id>54087ea9-8cc0-4ddc-a821-493185ddfdd0</id>
+      <masked>false</masked>
+      <name>hour</name>
+   </variable>
+   <variable>
+      <defaultValue>'15'</defaultValue>
+      <description></description>
+      <id>88167b67-0477-41ea-b11e-eb100e53001c</id>
+      <masked>false</masked>
+      <name>minute</name>
+   </variable>
 </TestCaseEntity>

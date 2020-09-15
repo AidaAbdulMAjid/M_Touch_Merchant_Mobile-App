@@ -3,7 +3,7 @@
    <description></description>
    <name>addProduct</name>
    <tag></tag>
-   <elementGuidId>08d8cf7d-9df8-44ad-8e60-78af743c75b8</elementGuidId>
+   <elementGuidId>ed2e9835-b830-4794-9337-cec2dfb50703</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>bc08c1d8-2dc0-4b50-9081-9ab8e04522da</testCaseGuid>
+   <variable>
+      <defaultValue>'0123456788'</defaultValue>
+      <description></description>
+      <id>1688eba5-5345-497a-8141-e6d0c078c3a4</id>
+      <masked>false</masked>
+      <name>mobile</name>
+   </variable>
+   <variable>
+      <defaultValue>'wannabie'</defaultValue>
+      <description></description>
+      <id>eefbf648-4cc6-4ffc-bb56-896e7f0aaa07</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'selling random stuff'</defaultValue>
+      <description></description>
+      <id>08bca7c5-6a85-4af3-ba33-a24398f6bd81</id>
+      <masked>false</masked>
+      <name>description</name>
+   </variable>
 </TestCaseEntity>

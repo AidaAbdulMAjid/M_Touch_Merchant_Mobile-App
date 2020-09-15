@@ -3,7 +3,7 @@
    <description></description>
    <name>android.view.View Update Stream Time</name>
    <tag></tag>
-   <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+   <elementGuidId>9090d7d2-3999-4a99-968b-48194639d9c8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

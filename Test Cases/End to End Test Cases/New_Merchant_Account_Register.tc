@@ -5,4 +5,39 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>801bc884-c927-4f15-85e7-f2791c49e12c</testCaseGuid>
+   <variable>
+      <defaultValue>'zuratest02@gmail.com'</defaultValue>
+      <description></description>
+      <id>a67abdc9-7626-4b30-b42f-9e8ba0432e3c</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>'zura izlita'</defaultValue>
+      <description></description>
+      <id>2727e37e-c6da-4c95-9740-7161fe645324</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'0123456789'</defaultValue>
+      <description></description>
+      <id>a801b609-96fc-4dd4-bf96-252ce2e795e3</id>
+      <masked>false</masked>
+      <name>mobile</name>
+   </variable>
+   <variable>
+      <defaultValue>'qwe123'</defaultValue>
+      <description></description>
+      <id>bb893a5a-c8a7-4e13-9e5b-677c144e77c8</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'qwe123'</defaultValue>
+      <description></description>
+      <id>239a7f93-90a4-4267-8b1b-75c8ea8168bb</id>
+      <masked>false</masked>
+      <name>confirmPassword</name>
+   </variable>
 </TestCaseEntity>

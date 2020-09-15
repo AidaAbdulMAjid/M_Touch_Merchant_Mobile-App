@@ -5,4 +5,39 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>59931660-ba36-46a9-a3c8-289026680bb2</testCaseGuid>
+   <variable>
+      <defaultValue>'herbanika'</defaultValue>
+      <description></description>
+      <id>c65639c3-2db3-4bdc-a448-73cf0233d0f8</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'refreshing breath, sinusitis, nasal congestion'</defaultValue>
+      <description></description>
+      <id>2dcdfcab-fed6-4924-8ecd-fb603ac8b3ef</id>
+      <masked>false</masked>
+      <name>description</name>
+   </variable>
+   <variable>
+      <defaultValue>'5.90'</defaultValue>
+      <description></description>
+      <id>ff7091f0-1f8d-44c7-8ab9-adca8b74dff8</id>
+      <masked>false</masked>
+      <name>price</name>
+   </variable>
+   <variable>
+      <defaultValue>'2'</defaultValue>
+      <description></description>
+      <id>2f85635d-3b43-4b09-93a6-5ed635d0bd1e</id>
+      <masked>false</masked>
+      <name>minOrder</name>
+   </variable>
+   <variable>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>5d6cacbe-5443-4586-9602-77ec04fae5ed</id>
+      <masked>false</masked>
+      <name>inventory</name>
+   </variable>
 </TestCaseEntity>

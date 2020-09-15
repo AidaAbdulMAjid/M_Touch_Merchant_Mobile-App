@@ -37,6 +37,15 @@ import java.time.Duration as Duration
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions
 import static io.appium.java_client.touch.TapOptions.tapOptions
 import static io.appium.java_client.touch.WaitOptions.waitOptions
+import com.kms.katalon.core.testdata.reader.ExcelFactory as ExcelFactory
+import java.net.URL as URL
+import org.apache.commons.io.FileUtils as FileUtils
+
+Date today = new Date()
+
+String todaysDate = today.format('MM_dd_yy')
+
+String nowTime = today.format('hh_mm_ss')
 
 WebUI.callTestCase(findTestCase('End to End Test Cases/New Test Case'), [('Username') : 'parkjjaekjaek@gmail.com', ('Password') : 'Zura1zlita'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -51,19 +60,35 @@ Mobile.tap(findTestObject('MTouch/android.widget.Button companyHome'), 0)
 
 Mobile.tap(findTestObject('MTouch/android.widget.EditText - Title'), 0, FailureHandling.STOP_ON_FAILURE)
 
-driver.getKeyboard().pressKey('test')
+driver.getKeyboard().pressKey(title)
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(title, 'title')
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'title') + todaysDate) + '-') + nowTime) + '.png')
+
+String TitleImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'title') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(TitleImagePath, 'title image path')
 
 //Mobile.hideKeyboard()
 Mobile.tap(findTestObject('MTouch/android.widget.EditText - Stream Description'), 0, FailureHandling.STOP_ON_FAILURE)
 
-driver.getKeyboard().pressKey('test')
+driver.getKeyboard().pressKey('description')
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(description, 'description')
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'description') + todaysDate) + '-') + nowTime) + '.png')
+
+String DescImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'description') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(DescImagePath, 'description image path')
 
 //Mobile.hideKeyboard()
 Mobile.tap(findTestObject('Object Repository/MTouch/DateandTime'), 0, FailureHandling.STOP_ON_FAILURE)
 
 String xx = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getAttribute('content-desc')
 
-while (xx != 'Wed Sep 02') {
+while (xx != date) {
     Point value = null
 
     value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getLocation()
@@ -80,9 +105,17 @@ while (xx != 'Wed Sep 02') {
     xx = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getAttribute('content-desc')
 }
 
+CustomKeywords.'myPack.ScheduleStream.demoKey'(date, 'date')
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'date') + todaysDate) + '-') + nowTime) + '.png')
+
+String DateImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'date') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(DateImagePath, 'date image path')
+
 String xy = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getAttribute('content-desc')
 
-while (xy != '01') {
+while (xy != hour) {
     Point value = null
 
     value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getLocation()
@@ -100,9 +133,17 @@ while (xy != '01') {
     xy = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getAttribute('content-desc')
 }
 
+CustomKeywords.'myPack.ScheduleStream.demoKey'(hour, 'hour')
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'hour') + todaysDate) + '-') + nowTime) + '.png')
+
+String HourImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'hour') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(HourImagePath, 'hour image path')
+
 String xz = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getAttribute('content-desc')
 
-while (xz != '01') {
+while (xz != minute) {
     Point value = null
 
     value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getLocation()
@@ -120,9 +161,28 @@ while (xz != '01') {
     xz = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getAttribute('content-desc')
 }
 
+CustomKeywords.'myPack.ScheduleStream.demoKey'(minute, 'minute')
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'minute') + todaysDate) + '-') + nowTime) + '.png')
+
+String MinuteImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'minute') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(MinuteImagePath, 'minute image path')
+
 Mobile.tap(findTestObject('MTouch/DateAndTimeDoneBtn'), 0)
+
+Mobile.switchToPortrait()
 
 driver.pressKeyCode(66)
 
 Mobile.tap(findTestObject('MTouch/CreateButton'), 0)
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'('Pass', 'result')
+
+String RImagePath = ((((GlobalVariable.ScheduleStreamImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + '.png'
+
+Mobile.takeScreenshot(((((GlobalVariable.ScheduleStreamImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + 
+    '.png')
+
+CustomKeywords.'myPack.ScheduleStream.demoKey'(RImagePath, 'result image path')
 

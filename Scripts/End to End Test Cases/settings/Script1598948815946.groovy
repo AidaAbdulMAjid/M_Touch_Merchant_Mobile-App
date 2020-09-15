@@ -30,6 +30,13 @@ import io.appium.java_client.android.nativekey.AndroidKey as AndroidKey
 import io.appium.java_client.android.nativekey.KeyEvent as KeyEvent
 import io.appium.java_client.android.AndroidDriver as AndroidDriver
 
+Date today = new Date()
+
+String todaysDate = today.format('MM_dd_yy')
+
+String nowTime = today.format('hh_mm_ss')
+
+
 WebUI.callTestCase(findTestCase('End to End Test Cases/New Test Case'), [('Username') : 'parkjjaekjaek@gmail.com', ('Password') : 'Zura1zlita'], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -37,31 +44,59 @@ AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
 Mobile.delay(5)
 
-Mobile.tapAtPosition(1886, 978)
+Mobile.tap(findTestObject('MTouch/icon settings'), 0)
 
 Mobile.switchToPortrait()
 
-Mobile.tapAtPosition(536.5, 571.7)
-
 Mobile.tapAtPosition(289.7, 499.7)
-
-//Mobile.tapOnImage('/storage/emulated/0/DCIM/Camera/testing1.jpg')
-
-Mobile.tap(findTestObject('MTouch/android.widget.EditText - settings mobile'), 0)
 
 Mobile.tapAndHoldAtPosition(259.7, 1108.5, 3)
 
-driver.getKeyboard().sendKeys('0123456788')
+driver.getKeyboard().sendKeys(mobile)
 
-//Mobile.tap(findTestObject('MTouch/android.widget.EditText - settings company name'), 0)
+CustomKeywords.'myPack.Settings.demoKey'(mobile, 'mobile')
+
+Mobile.takeScreenshot(((((GlobalVariable.SettingImagePath + 'mobile') + todaysDate) + '-') + nowTime) + '.png')
+
+String mobileImagePath = ((((GlobalVariable.SettingImagePath + 'mobile') + todaysDate) + '-') + nowTime) +
+'.png'
+
+CustomKeywords.'myPack.Settings.demoKey'(mobileImagePath, 'mobile image path')
+
 Mobile.tapAndHoldAtPosition(222.8, 1439.5, 3)
 
-driver.getKeyboard().sendKeys('wannabie')
+driver.getKeyboard().sendKeys(name)
 
-//Mobile.tap(findTestObject('MTouch/android.widget.EditText -settings Company Description'), 0)
-Mobile.tapAndHoldAtPosition(206.8, 1632.3, 3)
+CustomKeywords.'myPack.Settings.demoKey'(name, 'name')
 
-driver.getKeyboard().sendKeys('selling random stuff')
+Mobile.takeScreenshot(((((GlobalVariable.SettingImagePath + 'name') + todaysDate) + '-') + nowTime) + '.png')
+
+String nameImagePath = ((((GlobalVariable.SettingImagePath + 'name') + todaysDate) + '-') + nowTime) +
+'.png'
+
+CustomKeywords.'myPack.Settings.demoKey'(nameImagePath, 'name image path')
+
+Mobile.tapAndHoldAtPosition(198.8, 1126.8, 3)
+
+driver.getKeyboard().sendKeys(description)
+
+CustomKeywords.'myPack.Settings.demoKey'(description, 'description')
+
+Mobile.takeScreenshot(((((GlobalVariable.SettingImagePath + 'description') + todaysDate) + '-') + nowTime) + '.png')
+
+String descriptionImagePath = ((((GlobalVariable.SettingImagePath + 'description') + todaysDate) + '-') + nowTime) +
+'.png'
+
+CustomKeywords.'myPack.Settings.demoKey'(descriptionImagePath, 'description image path')
+
 
 Mobile.tap(findTestObject('MTouch/android.widget.Button settings update'), 0)
+
+CustomKeywords.'myPack.Settings.demoKey'('Pass', 'result')
+
+String RImagePath = ((((GlobalVariable.SettingImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + '.png'
+
+Mobile.takeScreenshot(((((GlobalVariable.SettingImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + '.png')
+
+CustomKeywords.'myPack.Settings.demoKey'(RImagePath, 'result image path')
 

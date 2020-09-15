@@ -5,4 +5,39 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>6556d8f8-66c9-4f8c-b85d-c38d536e49c6</testCaseGuid>
+   <variable>
+      <defaultValue>'lightstick'</defaultValue>
+      <description></description>
+      <id>45ed0315-bb78-40ca-ab13-a49459677537</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'3 colours'</defaultValue>
+      <description></description>
+      <id>823d3c6e-11ab-4b13-9cca-518d0a5139e7</id>
+      <masked>false</masked>
+      <name>description</name>
+   </variable>
+   <variable>
+      <defaultValue>'180.00'</defaultValue>
+      <description></description>
+      <id>603bc876-f9d6-443d-a8b7-49d044ce40f2</id>
+      <masked>false</masked>
+      <name>price</name>
+   </variable>
+   <variable>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>f04734a4-92ab-4a03-8449-5b7598552a08</id>
+      <masked>false</masked>
+      <name>minOrder</name>
+   </variable>
+   <variable>
+      <defaultValue>'50'</defaultValue>
+      <description></description>
+      <id>59b8d670-e701-4b85-86d5-4dc9b62d0f31</id>
+      <masked>false</masked>
+      <name>avaibility</name>
+   </variable>
 </TestCaseEntity>

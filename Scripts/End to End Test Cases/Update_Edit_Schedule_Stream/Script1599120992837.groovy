@@ -37,6 +37,15 @@ import java.time.Duration as Duration
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions
 import static io.appium.java_client.touch.TapOptions.tapOptions
 import static io.appium.java_client.touch.WaitOptions.waitOptions
+import com.kms.katalon.core.testdata.reader.ExcelFactory as ExcelFactory
+import java.net.URL as URL
+import org.apache.commons.io.FileUtils as FileUtils
+
+Date today = new Date()
+
+String todaysDate = today.format('MM_dd_yy')
+
+String nowTime = today.format('hh_mm_ss')
 
 WebUI.callTestCase(findTestCase('End to End Test Cases/New Test Case'), [('Username') : 'parkjjaekjaek@gmail.com', ('Password') : 'Zura1zlita'], 
     FailureHandling.STOP_ON_FAILURE)
@@ -51,85 +60,139 @@ Mobile.delay(3)
 
 Mobile.tapAtPosition(931, 475)
 
-Mobile.delay(3)
+Mobile.switchToPortrait()
 
-Mobile.tapAtPosition(509.7, 493.5)
+Mobile.tap(findTestObject('MTouch/UpdateStream/UpdateStreamTitle'), 0)
 
-Mobile.delay(3)
+Mobile.tapAndHoldAtPosition(248.8, 505.7, 3)
 
-driver.getKeyboard().sendKeys('herbanika')
+driver.getKeyboard().pressKey(title)
 
-Mobile.tapAtPosition(369.7, 401.6)
+CustomKeywords.'myPack.UpdateStream.demoKey'(title, 'title')
 
-Mobile.tapAndHoldAtPosition(182, 151, 3)
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'title') + todaysDate) + '-') + nowTime) + '.png')
 
-driver.getKeyboard().sendKeys('50 percent off')
+String TitleImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'title') + todaysDate) + '-') + nowTime) + '.png'
 
-Mobile.tapAtPosition(938.5, 650.4)
+CustomKeywords.'myPack.UpdateStream.demoKey'(TitleImagePath, 'title image path')
+
+Mobile.delay(2)
+
+Mobile.tap(findTestObject('MTouch/UpdateStream/UpdateStreamDescription'), 0)
+
+Mobile.tapAndHoldAtPosition(278.7, 721.7, 3)
+
+Mobile.tapAtPosition(625.4, 609.7)
+
+driver.getKeyboard().pressKey(description)
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(description, 'description')
+
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'description') + todaysDate) + '-') + nowTime) + '.png')
+
+String DescriptionImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'description') + todaysDate) + '-') + nowTime) + 
+'.png'
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(DescriptionImagePath, 'description image path')
+
+Mobile.delay(2)
+
+Mobile.tap(findTestObject('MTouch/UpdateStream/UpdateStreamDate'), 0)
 
 String xx = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getAttribute('content-desc')
 
-while (xx != 'Thur Sep 10') {
-	Point value = null
+while (xx != date) {
+    Point value = null
 
-	value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getLocation()
+    value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getLocation()
 
-	int x = value.x
+    int x = value.x
 
-	int y = value.y
+    int y = value.y
 
-	int y1 = value.y + 120
+    int y1 = value.y + 120
 
-	action.press(PointOption.point(x, y1)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x,
-			y)).release().perform()
+    action.press(PointOption.point(x, y1)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x, 
+            y)).release().perform()
 
-	xx = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getAttribute('content-desc')
+    xx = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[1]')).getAttribute('content-desc')
 }
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(date, 'date')
+
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'date') + todaysDate) + '-') + nowTime) + '.png')
+
+String DateImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'date') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(DateImagePath, 'date image path')
 
 String xy = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getAttribute('content-desc')
 
-while (xy != '05') {
-	Point value = null
+while (xy != hour) {
+    Point value = null
 
-	value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getLocation()
+    value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getLocation()
 
-	println(value)
+    println(value)
 
-	int x = value.x + 80
+    int x = value.x + 80
 
-	int y = value.y + 200
+    int y = value.y + 200
 
-	int y1 = value.y + 100
+    int y1 = value.y + 100
 
-	action.press(PointOption.point(x, y)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x, y1)).release().perform()
+    action.press(PointOption.point(x, y)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x, y1)).release().perform()
 
-	xy = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getAttribute('content-desc')
+    xy = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[2]')).getAttribute('content-desc')
 }
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(hour, 'hour')
+
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'hour') + todaysDate) + '-') + nowTime) + '.png')
+
+String HourImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'hour') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(HourImagePath, 'hour image path')
 
 String xz = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getAttribute('content-desc')
 
-while (xz != '00') {
-	Point value = null
+while (xz != minute) {
+    Point value = null
 
-	value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getLocation()
+    value = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getLocation()
 
-	println(value)
+    println(value)
 
-	int x = value.x + 80
+    int x = value.x + 80
 
-	int y = value.y + 200
+    int y = value.y + 200
 
-	int y1 = value.y + 100
+    int y1 = value.y + 100
 
-	action.press(PointOption.point(x, y)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x, y1)).release().perform()
+    action.press(PointOption.point(x, y)).waitAction(waitOptions(Duration.ofMillis(3000))).moveTo(PointOption.point(x, y1)).release().perform()
 
-	xz = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getAttribute('content-desc')
+    xz = driver.findElement(By.xpath('//*/android.view.View[1]/android.widget.SeekBar[3]')).getAttribute('content-desc')
 }
 
-Mobile.tapAtPosition(2024.0, 372.7)
+CustomKeywords.'myPack.UpdateStream.demoKey'(minute, 'minute')
+
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'minute') + todaysDate) + '-') + nowTime) + '.png')
+
+String MinuteImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'minute') + todaysDate) + '-') + nowTime) + '.png'
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(MinuteImagePath, 'minute image path')
+
+Mobile.tapAtPosition(959, 1518)
 
 driver.pressKeyCode(66)
 
-Mobile.tap(findTestObject('MTouch/android.widget.Button Update Stream Button'), 0)
+Mobile.tap(findTestObject('MTouch/UpdateStream/UpdateStreamButton'), 0)
 
+CustomKeywords.'myPack.UpdateStream.demoKey'('Pass', 'result')
+
+String RImagePath = ((((GlobalVariable.UpdateStreamImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + '.png'
+
+Mobile.takeScreenshot(((((GlobalVariable.UpdateStreamImagePath + 'Acknowledgement') + todaysDate) + '-') + nowTime) + '.png')
+
+CustomKeywords.'myPack.UpdateStream.demoKey'(RImagePath, 'result image path')
 
